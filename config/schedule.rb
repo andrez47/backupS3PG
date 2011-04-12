@@ -21,4 +21,8 @@
 #  runner "MyModel.task_to_run_at_four_thirty_in_the_morning"
 #end
 
+every 5.minutes do
+  command "backup perform --trigger S3PGBackup --config_file config/backup.rb"
+end
+
 # Learn more: http://github.com/javan/whenever
